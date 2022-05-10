@@ -23,10 +23,10 @@ public class BoardController : MonoBehaviour
 
     public void SetPieceRotation(PuzzlePiece piece)
     {
-        print(piece.gameObject.name);
+        
         for (int i = 0; i < puzzlePieces.Length; i++)
         {
-            print(puzzlePieces[i].gameObject.name);
+            
             if (piece.gameObject.name == puzzlePieces[i].gameObject.name)
             {
                 piecesRotations[i] = piece.isCorrectRotation;
