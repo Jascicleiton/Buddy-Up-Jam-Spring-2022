@@ -117,12 +117,21 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4156106236811349707, guid: 58e8f0e322b247146adce34f070d3449, type: 3}
+      propertyPath: objectToRotate
+      value: 
+      objectReference: {fileID: 7604230462282787956}
+    - target: {fileID: 4156106236811349707, guid: 58e8f0e322b247146adce34f070d3449, type: 3}
       propertyPath: boardController
       value: 
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2697268154240492967, guid: 58e8f0e322b247146adce34f070d3449, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 58e8f0e322b247146adce34f070d3449, type: 3}
+--- !u!1 &7604230462282787956 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4156106236811349702, guid: 58e8f0e322b247146adce34f070d3449, type: 3}
+  m_PrefabInstance: {fileID: 5776662341751726770}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7604230462282787958 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4156106236811349700, guid: 58e8f0e322b247146adce34f070d3449, type: 3}

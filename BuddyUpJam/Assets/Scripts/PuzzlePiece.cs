@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class PuzzlePiece : MonoBehaviour
 {
-    [HideInInspector] public bool isCorrectRotation = false;
+    public bool isCorrectRotation = false;
+    public Sprite pieceSprite;
     private float[] possibleRotations = { 90f, 180f, 270f };
 
     private float correctRotation;
@@ -13,45 +14,56 @@ public class PuzzlePiece : MonoBehaviour
     private Image highlight = null;
 
     [SerializeField] private BoardController boardController = null;
+    [SerializeField] private GameObject objectToRotate = null;
     private SpriteRenderer spriteRenderer = null;
+    private string pieceName;
 
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponentInParent<Animator>();
         highlight = GetComponentInChildren<Image>();
+        pieceName = transform.parent.name;
     }
     private void Start()
     {
         correctRotation = 0f;
         int random = Random.Range(0, 2);
-        transform.Rotate(0f, 0f, possibleRotations[random]);
+        objectToRotate.transform.Rotate(0f, 0f, possibleRotations[random], Space.Self);
         spriteRenderer.color = new Color(1f, 1f, 1f, 0.4f);
+        isCorrectRotation = false;
     }
 
     private void OnMouseDown()
     {
-        print(isCorrectRotation);
+        
         if (!isCorrectRotation)
         {
-            
-            gameObject.transform.Rotate(0f, 0f, 90f);
-            CheckRotation();
+            if (Input.GetMouseButton(0))
+            {
+                objectToRotate.transform.Rotate(0f, 0f, 90f, Space.Self);
+                CheckRotation();
+            }
+            else if (Input.GetMouseButton(2))
+            {
+                objectToRotate.transform.Rotate(0f, 0f, -90f, Space.Self);
+                CheckRotation();
+            }
         }
        
     }
 
     private void CheckRotation()
     {
-        
-            if (this.transform.eulerAngles.z > -30f && this.transform.eulerAngles.z < 50f)
-            {
-                isCorrectRotation = true;
+
+        if (objectToRotate.transform.localRotation.eulerAngles.z > -80 && objectToRotate.transform.localRotation.eulerAngles.z < 80)
+        {
+            isCorrectRotation = true;
             animator.SetBool("shouldWigle", false);
             highlight.enabled = false;
             boardController.SetPieceRotation(this);
-                spriteRenderer.color = new Color(1f, 1f, 1f, 1f);
-            }
+            spriteRenderer.color = new Color(1f, 1f, 1f, 1f);
+        }
 
 
         else
@@ -59,7 +71,7 @@ public class PuzzlePiece : MonoBehaviour
             isCorrectRotation = false;
             boardController.SetPieceRotation(this);
         }
-        
+
 
     }
 
@@ -79,5 +91,10 @@ public class PuzzlePiece : MonoBehaviour
             animator.SetBool("shouldWigle", false);
            // highlight.enabled = false;
         }
+    }
+
+    public string GetPieceName()
+    {
+        return pieceName;
     }
 }
