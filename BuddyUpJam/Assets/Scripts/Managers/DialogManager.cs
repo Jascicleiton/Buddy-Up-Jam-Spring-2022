@@ -13,8 +13,8 @@ public class DialogManager : MonoBehaviour
     [SerializeField] private GameObject nameBox;
     [SerializeField] private int currentLine;
 
-    [SerializeField] Image leftPortrait;
-    [SerializeField] Image rightPortrait;
+    public Image leftPortrait;
+    public Image rightPortrait;
 
     private bool justStarted = false;
 
@@ -24,15 +24,7 @@ public class DialogManager : MonoBehaviour
     private int dialogNumber = 1;
 
 
-    //private void OnEnable()
-    //{
-    //    EventHandler.DialogFinished += DialogFinished;
-    //}
-
-    //private void OnDisable()
-    //{
-    //    EventHandler.DialogFinished -= DialogFinished;
-    //}
+    
 
     private void Start()
     {
@@ -120,5 +112,28 @@ public class DialogManager : MonoBehaviour
         ShowDialogue(dialogLines, true, 1, new Dictionary<int, int[]>());
     }
 
-    
+    public void SecondDialogSet()
+    {
+        dialogNumber = 2;
+        string[] dialogLines = new string[8];
+        dialogLines[0] = "...";
+        dialogLines[1] = "I wish things could stop being so hard";
+        dialogLines[2] = "I just need a break";
+        dialogLines[3] = "Everyone keeps talking, but no one ever does anything.";
+        dialogLines[4] = "I hate them";
+        dialogLines[5] = "I hate my job";
+        dialogLines[6] = "I hate my life";
+        dialogLines[7] = "...";
+
+        ShowDialogue(dialogLines, true, 1, new Dictionary<int, int[]>());
+    }
+
+    public void ThirdDialogSet()
+    {
+        dialogNumber = 3;
+        string[] dialogLines = new string[1];
+        dialogLines[0] = "Oh! That irresponsible person! Throwing things at me? I’ll show him!";
+        
+        ShowDialogue(dialogLines, true, 1, new Dictionary<int, int[]>());
+    }
 }

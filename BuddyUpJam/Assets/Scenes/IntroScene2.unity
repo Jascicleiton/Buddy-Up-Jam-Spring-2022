@@ -275,7 +275,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &160758017
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -650,7 +650,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 127, y: -28.3}
+  m_AnchoredPosition: {x: 163, y: -28.3}
   m_SizeDelta: {x: 384, y: 125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &360437609
@@ -1362,7 +1362,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -2}
+  m_AnchoredPosition: {x: -13, y: -2}
   m_SizeDelta: {x: 108, y: 108}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1254320727
@@ -1424,7 +1424,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1315518869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1559,9 +1559,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 545df42d553d0784ca47033b4239ce5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectsToActivate:
-  - {fileID: 2935224122977434805}
-  - {fileID: 1942711073}
+  objectsToActivate: []
   dialogManager: {fileID: 2935224122977435466}
 --- !u!1 &1455563823
 GameObject:
@@ -1599,7 +1597,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 121, y: -93.6}
+  m_AnchoredPosition: {x: 139.8, y: -93.6}
   m_SizeDelta: {x: 384, y: 125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1455563825
@@ -1813,7 +1811,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 113, y: 0.7}
+  m_AnchoredPosition: {x: 162.3, y: 0.7}
   m_SizeDelta: {x: 383, y: 125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1591838149
@@ -1890,7 +1888,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 71, y: -66.1}
+  m_AnchoredPosition: {x: 137.9, y: -66.1}
   m_SizeDelta: {x: 383, y: 125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1689841319
@@ -1967,7 +1965,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -120, y: -35.2}
+  m_AnchoredPosition: {x: -187.3, y: -35.2}
   m_SizeDelta: {x: 383, y: 125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1792560291
@@ -2201,10 +2199,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1883765819}
     m_Modifications:
-    - target: {fileID: 2434801655108426719, guid: 807bad4e8ee3a9c438b88d59ea344b4b, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 7d4820679ae220543b1f57ff612756e7, type: 3}
     - target: {fileID: 2434801655922219278, guid: 807bad4e8ee3a9c438b88d59ea344b4b, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2398,7 +2392,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -120, y: -53.5}
+  m_AnchoredPosition: {x: -212.7, y: -53.5}
   m_SizeDelta: {x: 384, y: 125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1960024573
@@ -2475,7 +2469,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -120, y: -91.3}
+  m_AnchoredPosition: {x: -212.7, y: -91.3}
   m_SizeDelta: {x: 384, y: 125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2098525071
@@ -2525,7 +2519,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2114964214}
-  - component: {fileID: 2114964215}
   m_Layer: 0
   m_Name: CraneHit
   m_TagString: Untagged
@@ -2548,21 +2541,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2114964215
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2114964213}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0266e510e2de4884a97fdd3d3e94f978, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  craneImage: {fileID: 160758016}
-  dialogManager: {fileID: 2935224122977435466}
-  portraitSprite: {fileID: 21300000, guid: ef4b16040dc62d54486522330b54549f, type: 3}
 --- !u!1 &2935224122977434805
 GameObject:
   m_ObjectHideFlags: 0
@@ -2587,7 +2565,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2935224122977434805}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 426507022f31e2d4888df04f89f659b1, type: 3}
   m_Name: 
