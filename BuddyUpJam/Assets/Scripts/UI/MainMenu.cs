@@ -3,10 +3,18 @@ using UnityEngine;
 
 public class MainMenu : MonoBehaviour
 {
+    private void Start()
+    {
+        if(!SoundManager.Instance.isMusicPlaying)
+        {
+            SoundManager.Instance.PlayMusic(0);
+        }
+    }
+
     public void OnStartButtonCLicked()
     {
-        //SceneManager.LoadScene("IntroScene");
-        SceneManager.LoadScene(SceneName.SamplePuzzle.ToString());
+        SceneManager.LoadScene(SceneName.IntroScene.ToString());
+        //SceneManager.LoadScene(SceneName.TeoPuzzle.ToString());
     }
 
     public void OnCreditsButtonClicked()

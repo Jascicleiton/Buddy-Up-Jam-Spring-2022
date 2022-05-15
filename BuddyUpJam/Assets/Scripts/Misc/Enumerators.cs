@@ -4,5 +4,7 @@ public enum SceneName
     MainMenu,
     Credits,
     IntroScene,
-    SamplePuzzle
+    IntroScene1,
+    IntroScene2,
+    TeoPuzzle
 }

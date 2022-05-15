@@ -10,35 +10,26 @@ public class BoardController : MonoBehaviour
     [SerializeField] private GameObject piecePrefab = null;
     private bool[] piecesRotationsCorrect = null;
 
-    [SerializeField] private int totalPieces = 25;
+   [SerializeField] private int totalPieces = 25;
     public bool gameWon = true;
     // Start is called before the first frame update
     void Start()
     {
+        totalPieces = transform.childCount;
         puzzlePieces = new GameObject[totalPieces];
-        //for (int i = 0; i < Mathf.Sqrt(totalPieces); i++)
-        //{
-        //    for (int j = 0; j < Mathf.Sqrt(totalPieces); j++)
-        //    {
-        //        puzzlePieces[i] = Instantiate(piecePrefab, this.transform);
-        //        puzzlePieces[i].name = "PuzzlePiece_" + i + j;
-        //        puzzlePieces[i].transform.position = new Vector3(i * 3, j * 3, 0f);
-        //    }
-            
-        //}
-        //gameObject.transform.position = new Vector3(-6, -6, 0);
-       // totalPieces = gameObject.transform.childCount;
+        if(SceneManager.GetActiveScene().name == SceneName.TeoPuzzle.ToString())
+        {           
+            if (SoundManager.Instance != null)
+            {
+                SoundManager.Instance.PlayMusic(3);
+            }
+        }
         
         piecesRotationsCorrect = new bool[puzzlePieces.Length];
         for (int i = 0; i < puzzlePieces.Length; i++)
         {
             puzzlePieces[i] = piecesHolder.transform.GetChild(i).gameObject;
         }
-    }
-
-    private void SpawnPieces()
-    {
-
     }
 
     public void SetPieceRotation(PuzzlePiece piece)
@@ -52,7 +43,7 @@ public class BoardController : MonoBehaviour
                 piecesRotationsCorrect[i] = piece.isCorrectRotation;
                 if (CheckIfAllPiecesRotationsAreCorrect())
                 {
-                    SceneManager.LoadScene(SceneName.MainMenu.ToString());
+                    SceneManager.LoadScene(SceneName.Credits.ToString());
                 }
 
                 return;

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class PuzzlePiece : MonoBehaviour
 {
@@ -11,18 +12,18 @@ public class PuzzlePiece : MonoBehaviour
 
     private float correctRotation;
     private Animator animator = null;
-    private Image highlight = null;
+    
 
     [SerializeField] private BoardController boardController = null;
     [SerializeField] private GameObject objectToRotate = null;
-    private SpriteRenderer spriteRenderer = null;
+    private Image image = null;
     private string pieceName;
 
     private void Awake()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        image = GetComponent<Image>();
         animator = GetComponentInParent<Animator>();
-        highlight = GetComponentInChildren<Image>();
+        objectToRotate = this.gameObject;
         pieceName = transform.parent.name;
     }
     private void Start()
@@ -30,25 +31,18 @@ public class PuzzlePiece : MonoBehaviour
         correctRotation = 0f;
         int random = Random.Range(0, 2);
         objectToRotate.transform.Rotate(0f, 0f, possibleRotations[random], Space.Self);
-        spriteRenderer.color = new Color(1f, 1f, 1f, 0.4f);
+        image.color = new Color(1f, 1f, 1f, 0.8f);
         isCorrectRotation = false;
     }
 
-    private void OnMouseDown()
+    public void OnMouseDown()
     {
-        
+        print("Clicked");
         if (!isCorrectRotation)
         {
-            if (Input.GetMouseButton(0))
-            {
+            
                 objectToRotate.transform.Rotate(0f, 0f, 90f, Space.Self);
                 CheckRotation();
-            }
-            else if (Input.GetMouseButton(2))
-            {
-                objectToRotate.transform.Rotate(0f, 0f, -90f, Space.Self);
-                CheckRotation();
-            }
         }
        
     }
@@ -60,9 +54,9 @@ public class PuzzlePiece : MonoBehaviour
         {
             isCorrectRotation = true;
             animator.SetBool("shouldWigle", false);
-            highlight.enabled = false;
+            
             boardController.SetPieceRotation(this);
-            spriteRenderer.color = new Color(1f, 1f, 1f, 1f);
+            image.color = new Color(1f, 1f, 1f, 1f);
         }
 
 
@@ -75,7 +69,7 @@ public class PuzzlePiece : MonoBehaviour
 
     }
 
-    private void OnMouseEnter()
+    public void OnMouseEnter()
     {
         if (!isCorrectRotation)
         {
@@ -84,7 +78,7 @@ public class PuzzlePiece : MonoBehaviour
         }
     }
 
-    private void OnMouseExit()
+    public void OnMouseExit()
     {
         if (!isCorrectRotation)
         {

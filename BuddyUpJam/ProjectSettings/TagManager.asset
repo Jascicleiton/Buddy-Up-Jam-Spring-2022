@@ -41,3 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: BackGround
+    uniqueID: 2540362755
+    locked: 0
+  - name: Zoom
+    uniqueID: 2571235871
+    locked: 0
+  - name: UI
+    uniqueID: 1335706715
+    locked: 0
