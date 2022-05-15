@@ -37,12 +37,21 @@ public class PuzzlePiece : MonoBehaviour
 
     public void OnMouseDown()
     {
-        print("Clicked");
         if (!isCorrectRotation)
         {
-            
+            if (SoundManager.Instance != null)
+            {
+                SoundManager.Instance.PlaySfx(7);
+            }
                 objectToRotate.transform.Rotate(0f, 0f, 90f, Space.Self);
                 CheckRotation();
+        }
+        else
+        {
+            if (SoundManager.Instance != null)
+            {
+                SoundManager.Instance.PlaySfx(8);
+            }
         }
        
     }

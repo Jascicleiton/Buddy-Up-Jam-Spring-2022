@@ -14,4 +14,14 @@ public static class EventHandler
             DialogFinished(dialogNumber);
         }
     }
+
+    public static event Action<int> SfxToPlay;
+
+    public static void CallSfxToPlay(int sfxToPlay)
+    {
+        if (SfxToPlay != null)
+        {
+            SfxToPlay(sfxToPlay);
+        }
+    }
 }

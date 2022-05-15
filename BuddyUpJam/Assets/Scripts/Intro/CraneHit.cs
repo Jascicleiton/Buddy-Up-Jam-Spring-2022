@@ -34,7 +34,7 @@ public class CraneHit : MonoBehaviour
         }
         else if (dialogNumber == 3)
         {
-            SceneManager.LoadScene(SceneName.TeoPuzzle.ToString());
+            SceneManager.LoadScene(SceneName.IntroScene2.ToString());
         }
     }
 
