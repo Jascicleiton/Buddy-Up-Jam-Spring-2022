@@ -39,6 +39,9 @@ public class SoundManager : Singleton<SoundManager>
         isMusicPlaying = false;
     }
 
+    /// <summary>
+    /// 0 = Femme sigh, 1 = Phone buzzing, 2 = Noise of frustration, 3 = something hit miyako, 4 = Heavy steps, 5 = Bump into someone, 6 = footstep(1), 7 = UI buttons
+    /// </summary>
     public void PlaySfx(int sfxToPlay)
     {
         if (sfx.Length > 0 && sfxToPlay < sfx.Length)

@@ -13,17 +13,29 @@ public class MainMenu : MonoBehaviour
 
     public void OnStartButtonCLicked()
     {
+        if(SoundManager.Instance != null)
+        {
+            SoundManager.Instance.PlaySfx(7);
+        }
         SceneManager.LoadScene(SceneName.IntroScene.ToString());
         //SceneManager.LoadScene(SceneName.TeoPuzzle.ToString());
     }
 
     public void OnCreditsButtonClicked()
     {
+        if (SoundManager.Instance != null)
+        {
+            SoundManager.Instance.PlaySfx(7);
+        }
         SceneManager.LoadScene(SceneName.Credits.ToString());
     }
 
     public void OnReturnButtonClicked()
     {
+        if (SoundManager.Instance != null)
+        {
+            SoundManager.Instance.PlaySfx(7);
+        }
         SceneManager.LoadScene(SceneName.MainMenu.ToString());
     }
 }
