@@ -31,7 +31,7 @@ public class PuzzlePiece : MonoBehaviour
         correctRotation = 0f;
         int random = Random.Range(0, 2);
         objectToRotate.transform.Rotate(0f, 0f, possibleRotations[random], Space.Self);
-        image.color = new Color(1f, 1f, 1f, 0.8f);
+        image.color = new Color(1f, 1f, 1f, 0.7f);
         isCorrectRotation = false;
     }
 
@@ -50,7 +50,7 @@ public class PuzzlePiece : MonoBehaviour
         {
             if (SoundManager.Instance != null)
             {
-                SoundManager.Instance.PlaySfx(8);
+                SoundManager.Instance.PlaySfx(7);
             }
         }
        
