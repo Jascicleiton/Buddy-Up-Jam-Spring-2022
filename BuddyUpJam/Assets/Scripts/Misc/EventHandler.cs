@@ -24,4 +24,24 @@ public static class EventHandler
             SfxToPlay(sfxToPlay);
         }
     }
+
+    public static event Action CraneClicked;
+
+    public static void CallCraneClicked()
+    {
+        if (CraneClicked != null)
+        {
+            CraneClicked();
+        }
+    }
+
+    public static event Action PieceRemoved;
+    
+    public static void CallPieceRemoved()
+    {
+        if (PieceRemoved != null)
+        {
+            PieceRemoved();
+        }
+    }
 }

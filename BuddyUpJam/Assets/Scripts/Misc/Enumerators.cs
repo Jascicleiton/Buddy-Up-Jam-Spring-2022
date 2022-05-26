@@ -8,3 +8,11 @@ public enum SceneName
     IntroScene2,
     TeoPuzzle
 }
+
+public enum PuzzleSequence
+{
+    Up,
+    Down,
+    Right,
+    Left
+}

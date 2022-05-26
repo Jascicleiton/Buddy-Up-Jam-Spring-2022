@@ -10,6 +10,8 @@ public class BoardController : MonoBehaviour
     [SerializeField] private GameObject piecePrefab = null;
     private bool[] piecesRotationsCorrect = null;
 
+    [SerializeField] private float loadTime = 2f;
+    [SerializeField] private SceneName sceneToLoad;
    [SerializeField] private int totalPieces = 25;
     public bool gameWon = true;
     // Start is called before the first frame update
@@ -43,7 +45,7 @@ public class BoardController : MonoBehaviour
                 piecesRotationsCorrect[i] = piece.isCorrectRotation;
                 if (CheckIfAllPiecesRotationsAreCorrect())
                 {
-                    SceneManager.LoadScene(SceneName.Credits.ToString());
+                    StartCoroutine(WaitToLoad());
                 }
 
                 return;
@@ -71,5 +73,16 @@ public class BoardController : MonoBehaviour
             }
         }
         return gameWon;
+    }
+
+    private IEnumerator WaitToLoad()
+    {
+        yield return new WaitForSeconds(loadTime);
+        GoToNextScene();
+    }
+
+    private void GoToNextScene()
+    {
+        SceneManager.LoadScene(sceneToLoad.ToString());
     }
 }
