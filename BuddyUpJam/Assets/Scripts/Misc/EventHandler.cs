@@ -44,4 +44,13 @@ public static class EventHandler
             PieceRemoved();
         }
     }
+
+    public static event Action<PuzzleSequence> Slide;
+    public static void CallSlide(PuzzleSequence directionToSlide)
+    {
+        if (Slide != null)
+        {
+            Slide(directionToSlide);
+        }
+    }
 }

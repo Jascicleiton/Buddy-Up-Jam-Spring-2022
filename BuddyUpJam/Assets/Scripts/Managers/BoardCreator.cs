@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BoardCreator : MonoBehaviour
 {
-   [SerializeField] private GameObject piecePrefab = null;
+   
 
     // Start is called before the first frame update
     void Start()

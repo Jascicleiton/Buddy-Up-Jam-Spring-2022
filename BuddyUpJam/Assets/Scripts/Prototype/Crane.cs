@@ -9,8 +9,4 @@ public class Crane : MonoBehaviour
         EventHandler.CallCraneClicked();
 
     }
-    //private void OnMouseDown()
-    //{
-    //    EventHandler.CallCraneClicked();
-    //}
 }
