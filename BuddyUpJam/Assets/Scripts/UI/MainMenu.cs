@@ -17,7 +17,7 @@ public class MainMenu : MonoBehaviour
         {
             SoundManager.Instance.PlaySfx(7);
         }
-        SceneManager.LoadScene(SceneName.IntroScene.ToString());
+        SceneManager.LoadScene(SceneName.SelectPuzzleType.ToString());
         //SceneManager.LoadScene(SceneName.TeoPuzzle.ToString());
     }
 

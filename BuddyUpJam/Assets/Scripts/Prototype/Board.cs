@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
 
@@ -19,6 +19,8 @@ public class Board : Singleton<Board>
     [Tooltip("The number of cranes that need to be made to 'finish' the puzzle")]
     [SerializeField] int cranesGoal = 5;
     private int currentCranesCount = 0;
+
+
 
 
     protected override void Awake()
@@ -387,7 +389,7 @@ public class Board : Singleton<Board>
     //      }
     //  }
 
-    public void AddCrane()
+     public void AddCrane()
     {
         currentCranesCount++;
         for (int i = 0; i < cranes.Length; i++)
@@ -400,7 +402,7 @@ public class Board : Singleton<Board>
         }
         if (currentCranesCount == cranesGoal)
         {
-            // End puzzle
+            SceneManager.LoadScene(SceneName.Credits.ToString());
         }
     }
 

@@ -14,13 +14,14 @@ public class DialogManager : MonoBehaviour
     [SerializeField] private int currentLine;
 
 
-
+    [SerializeField] private Image leftBackground;
     public Image leftPortrait;
     /// <summary>
     /// 0 = Myiako, 1 = Myiako angry, 2 = Miyako happy, 3 = Miyako startled
     /// </summary>
     [SerializeField] private Sprite[] leftSprites;
     public Image rightPortrait;
+    [SerializeField] private Image rightBackground;
     /// <summary>
     /// 0 = Teo, 1 = Teo sad, 2 = Teo happy
     /// </summary>
@@ -81,96 +82,133 @@ public class DialogManager : MonoBehaviour
             case 0:
                 leftPortrait.sprite = leftSprites[1];
                 leftPortrait.color = new Color(1f, 1f, 1f, 1f);
+                leftBackground.color = new Color(1f, 1f, 1f, 1f);
                 rightPortrait.color = new Color(1f, 1f, 1f, 0.6f);
-                
+                rightBackground.color = new Color(1f, 1f, 1f, 0f);
                 break;
             case 1:
                 leftPortrait.color = new Color(1f, 1f, 1f, 1f);
-                rightPortrait.color = new Color(1f, 1f, 1f, 0.6f);
+                leftBackground.color = new Color(1f, 1f, 1f, 1f);
+                                rightPortrait.color = new Color(1f, 1f, 1f, 0.6f);
+                rightBackground.color = new Color(1f, 1f, 1f, 0f);
                 break;
             case 2:
                 nameText.text = "?";
                 leftPortrait.color = new Color(1f, 1f, 1f, 0.6f);
+                leftBackground.color = new Color(1f, 1f, 1f, 0f);
                 rightPortrait.color = new Color(1f, 1f, 1f, 1f);
+                rightBackground.color = new Color(1f, 1f, 1f, 1f);
                 break;
             case 3:
                 nameText.text = "Miyako";
                 leftPortrait.color = new Color(1f, 1f, 1f, 1f);
-                rightPortrait.color = new Color(1f, 1f, 1f, 0.6f);
+                leftBackground.color = new Color(1f, 1f, 1f, 1f);
+                                rightPortrait.color = new Color(1f, 1f, 1f, 0.6f);
+                rightBackground.color = new Color(1f, 1f, 1f, 0f);
                 break;
             case 4:
                 nameText.text = "?";
                 leftPortrait.color = new Color(1f, 1f, 1f, 0.6f);
+                leftBackground.color = new Color(1f, 1f, 1f, 0f);
                 rightPortrait.color = new Color(1f, 1f, 1f, 1f);
+                rightBackground.color = new Color(1f, 1f, 1f, 1f);
                 break;
             case 5:
                 nameText.text = "Miyako";
                 leftPortrait.color = new Color(1f, 1f, 1f, 0.6f);
+                leftBackground.color = new Color(1f, 1f, 1f, 0f);
                 rightPortrait.color = new Color(1f, 1f, 1f, 1f);
+                rightBackground.color = new Color(1f, 1f, 1f, 1f);
                 break;
             case 6:
                 leftPortrait.sprite = leftSprites[0];
                 leftPortrait.color = new Color(1f, 1f, 1f, 1f);
-                rightPortrait.color = new Color(1f, 1f, 1f, 0.6f);
+                leftBackground.color = new Color(1f, 1f, 1f, 1f);
+                                rightPortrait.color = new Color(1f, 1f, 1f, 0.6f);
+                rightBackground.color = new Color(1f, 1f, 1f, 0f);
                 break;
             case 7:
                 nameText.text = "?";
                 leftPortrait.color = new Color(1f, 1f, 1f, 0.6f);
+                leftBackground.color = new Color(1f, 1f, 1f, 0f);
                 rightPortrait.color = new Color(1f, 1f, 1f, 1f);
+                rightBackground.color = new Color(1f, 1f, 1f, 1f);
                 break;
             case 8:
                 nameText.text = "Miyako";
                 leftPortrait.sprite = leftSprites[3];
                 leftPortrait.color = new Color(1f, 1f, 1f, 1f);
-                rightPortrait.color = new Color(1f, 1f, 1f, 0.6f);
+                leftBackground.color = new Color(1f, 1f, 1f, 1f);
+                                rightPortrait.color = new Color(1f, 1f, 1f, 0.6f);
+                rightBackground.color = new Color(1f, 1f, 1f, 0f);
                 break;
             case 9:
                 nameText.text = "?";
                 leftPortrait.color = new Color(1f, 1f, 1f, 0.6f);
+                leftBackground.color = new Color(1f, 1f, 1f, 0f);
                 rightPortrait.color = new Color(1f, 1f, 1f, 1f);
+                rightBackground.color = new Color(1f, 1f, 1f, 1f);
                 break;
             case 10:
                 nameText.text = "Miyako";
                 leftPortrait.sprite = leftSprites[0];
                 leftPortrait.color = new Color(1f, 1f, 1f, 0.6f);
+                leftBackground.color = new Color(1f, 1f, 1f, 0f);
                 rightPortrait.color = new Color(1f, 1f, 1f, 1f);
+                rightBackground.color = new Color(1f, 1f, 1f, 1f);
                 break;
             case 11:
                 nameText.text = "Teo";
                 leftPortrait.color = new Color(1f, 1f, 1f, 0.6f);
+                leftBackground.color = new Color(1f, 1f, 1f, 0f);
                 rightPortrait.color = new Color(1f, 1f, 1f, 1f);
+                rightBackground.color = new Color(1f, 1f, 1f, 1f);
                 break;
             case 12:
                 leftPortrait.color = new Color(1f, 1f, 1f, 0.6f);
+                leftBackground.color = new Color(1f, 1f, 1f, 0f);
                 rightPortrait.color = new Color(1f, 1f, 1f, 1f);
+                rightBackground.color = new Color(1f, 1f, 1f, 1f);
                 break;
             case 13:
                 leftPortrait.color = new Color(1f, 1f, 1f, 0.6f);
+                leftBackground.color = new Color(1f, 1f, 1f, 0f);
                 rightPortrait.color = new Color(1f, 1f, 1f, 1f);
+                rightBackground.color = new Color(1f, 1f, 1f, 1f);
                 break;
             case 14:
                 nameText.text = "Miyako";
                 leftPortrait.sprite = leftSprites[0];
                 leftPortrait.color = new Color(1f, 1f, 1f, 1f);
+                leftBackground.color = new Color(1f, 1f, 1f, 1f);
                 rightPortrait.color = new Color(1f, 1f, 1f, 0.6f);
+                rightBackground.color = new Color(1f, 1f, 1f, 0f);
                 break;
             case 15:
                 leftPortrait.color = new Color(1f, 1f, 1f, 1f);
+                leftBackground.color = new Color(1f, 1f, 1f, 1f);
                 rightPortrait.color = new Color(1f, 1f, 1f, 0.6f);
+                rightBackground.color = new Color(1f, 1f, 1f, 0f);
                 break;
             case 16:
                 nameText.text = "Teo";
                 leftPortrait.color = new Color(1f, 1f, 1f, 0.6f);
+                leftBackground.color = new Color(1f, 1f, 1f, 0f);
                 rightPortrait.color = new Color(1f, 1f, 1f, 1f);
+                rightBackground.color = new Color(1f, 1f, 1f, 1f);
                 break;
             case 17:
                 nameText.text = "Miyako";
                 leftPortrait.color = new Color(1f, 1f, 1f, 1f);
+                leftBackground.color = new Color(1f, 1f, 1f, 1f);
                 rightPortrait.color = new Color(1f, 1f, 1f, 0.6f);
+                rightBackground.color = new Color(1f, 1f, 1f, 0f);
                 break;
             case 18:
                 leftPortrait.color = new Color(1f, 1f, 1f, 1f);
+                leftBackground.color = new Color(1f, 1f, 1f, 1f);
                 rightPortrait.color = new Color(1f, 1f, 1f, 0.6f);
+                rightBackground.color = new Color(1f, 1f, 1f, 0f);
                 break;
             case 19:
                 nameText.text = "Teo";
@@ -181,6 +219,7 @@ public class DialogManager : MonoBehaviour
                 rightPortrait.sprite = rightSprites[2];
                 leftPortrait.color = new Color(1f, 1f, 1f, 0.6f);
                 rightPortrait.color = new Color(1f, 1f, 1f, 1f);
+                rightBackground.color = new Color(1f, 1f, 1f, 1f);
                 break;
 
             default:

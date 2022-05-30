@@ -48,7 +48,14 @@ public class Intro3Controller : MonoBehaviour
     {
         if (dialogNumber == 4)
         {
-            SceneManager.LoadScene(SceneName.TeoPuzzle.ToString());
+            if (GameManager.Instance != null)
+            {
+                SceneManager.LoadScene(GameManager.Instance.puzzleToGoTo.ToString());
+            }
+            else
+            {
+                SceneManager.LoadScene(SceneName.TeoPuzzle.ToString());
+            }
         }
     }
 }

@@ -3,10 +3,12 @@ public enum SceneName
     SplashScreen,
     MainMenu,
     Credits,
+    SelectPuzzleType,
     IntroScene,
     IntroScene1,
     IntroScene2,
-    TeoPuzzle
+    TeoPuzzle,
+    Prototype
 }
 
 public enum PuzzleSequence
