@@ -5,6 +5,7 @@ using UnityEngine;
 public class SoundManager : Singleton<SoundManager>
 {
     [SerializeField] private AudioSource[] musics;
+    [Tooltip("0 = Miyako stomach growl, 1 = Miyako frustrated sigh, 2 = Miyako sad sigh, 3 = Miyako text alert, 4 = crane hits miyako, 5 = Miyako angry growl, 6 = Miyako huff puff, 7 = Teo laugh 1, 8 = Teo footsteps, 9 = Bump into Teo, 10 = Miyako footsteps, 11 = teo laugh 2, 12 = UI Button 1, 13 = UI Button 2")]
     [SerializeField] private AudioSource[] sfx;
 
     public bool isMusicPlaying = false;
@@ -40,7 +41,7 @@ public class SoundManager : Singleton<SoundManager>
     }
 
     /// <summary>
-    /// 0 = Femme sigh, 1 = Phone buzzing, 2 = Noise of frustration, 3 = something hit miyako, 4 = Heavy steps, 5 = Bump into someone, 6 = footstep(1), 7 = UI buttons
+    /// 0 = Miyako stomach growl, 1 = Miyako frustrated sigh, 2 = Miyako sad sigh, 3 = Miyako text alert, 4 = crane hits miyako, 5 = Miyako angry growl, 6 = Miyako huff puff, 7 = Teo laugh 1, 8 = Teo footsteps, 9 = Bump into Teo, 10 = Miyako footsteps, 11 = teo laugh 2, 12 = UI Button 1, 13 = UI Button 2
     /// </summary>
     public void PlaySfx(int sfxToPlay)
     {
