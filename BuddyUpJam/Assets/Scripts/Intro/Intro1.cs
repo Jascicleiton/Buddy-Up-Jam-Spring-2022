@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Intro1 : MonoBehaviour
 {
@@ -10,9 +11,10 @@ public class Intro1 : MonoBehaviour
         myAnimator = GetComponent<Animator>();
         
     }
-    private void Start()
+     public void GoToNextScene(SceneName sceneName)
     {
-     //   PlayAnimation();
+        // SceneManager.LoadScene(sceneName.ToString());
+        SceneManager.LoadScene(GameManager.Instance.puzzleToGoTo.ToString());
     }
 
 
